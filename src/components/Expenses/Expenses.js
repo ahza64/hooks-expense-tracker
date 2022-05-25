@@ -1,9 +1,10 @@
 import ExpenseItem from './ExpenseItem'
+import Card from '../UI/Card'
 import './Expenses.css'
 
 export default function Expenses(props) {
   return (
-    <div className="expenses">
+    <Card className="expenses">
       {props.items.map((expense) => {
         return <ExpenseItem
           key={expense.id}
@@ -12,6 +13,6 @@ export default function Expenses(props) {
           date={expense.date}
         />
       })}
-    </div>
+    </Card>
   )
 }
